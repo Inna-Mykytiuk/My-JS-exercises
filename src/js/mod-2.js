@@ -113,37 +113,86 @@
 //розподіл на частинки
 
 //функція збору даних
-function colectInfo() {
-  const weight = prompt('Enter your weight');
-  const height = prompt('Enter your height');
-  return [weight, height];
-}
+// function colectInfo() {
+//   const weight = prompt('Enter your weight');
+//   const height = prompt('Enter your height');
+//   return [weight, height];
+// }
 
-//функція вичислення
-function getBMI(array) {
-  const weight = array[0];
-  const height = array[1];
-  return weight / Math.pow(height, 2);
-}
+// //функція вичислення
+// function getBMI(array) {
+//   const weight = array[0];
+//   const height = array[1];
+//   return weight / Math.pow(height, 2);
+// }
 
-//функція виведення повідомлень
-function showresult(bmi) {
-  if (bmi < 18.5) {
-    alert('Insufficient body weight');
-  } else if (bmi >= 18.5 && bmi < 24.9) {
-    alert('Norma');
-  } else {
-    alert('Excess body weight');
-  }
-}
+// //функція виведення повідомлень
+// function showresult(bmi) {
+//   if (bmi < 18.5) {
+//     alert('Insufficient body weight');
+//   } else if (bmi >= 18.5 && bmi < 24.9) {
+//     alert('Norma');
+//   } else {
+//     alert('Excess body weight');
+//   }
+// }
 
-//функція вичислення результату
-function calcBMI() {
-  const info = colectInfo();
-  //Збираємо дані
-  const result = showresult(info);
-  //Виводимо результат
-  showresult(result);
-}
+// //функція вичислення результату
+// function calcBMI() {
+//   const info = colectInfo();
+//   //Збираємо дані
+//   const result = showresult(info);
+//   //Виводимо результат
+//   showresult(result);
+// }
 
-calcBMI();
+// calcBMI();
+
+//-------2----------
+
+//Знаходимо найменше і найбільше число в масиві
+//v1
+
+// function findMaxNumber(array) {
+//   return Math.max(...array);
+// }
+
+// // const newArr = [2, 5, 65, 13, 98];
+// // const maxNumber = findMaxNumber(newArr);
+
+// const maxNumber = findMaxNumber([2, 5, 65, 13, 98]);
+// console.log(maxNumber);
+
+// function findMinNumber(array) {
+//   return Math.min(...array);
+// }
+
+// const minNumber = findMinNumber([2, 5, 65, 13, 98]);
+// console.log(minNumber);
+
+//v2
+
+// function findMaxNumber(numbers) {
+//   let maxNumb = numbers[0];
+
+//   for (let number of numbers) {
+//     if (maxNumb < number) {
+//       maxNumb = number;
+//     }
+//   }
+//   return maxNumb;
+// }
+
+// console.log(findMaxNumber([2, 5, 65, 13, 98]));
+
+// function findMinNumber(numbers) {
+//   let minNumb = numbers[0];
+//   for (let number of numbers) {
+//     if (minNumb > number) {
+//       minNumb = number;
+//     }
+//   }
+//   return minNumb;
+// }
+
+// console.log(findMinNumber([2, 5, 65, 13, 98]));
