@@ -92,3 +92,58 @@
 // console.log('numbers', numbers);
 
 //------1------
+
+//Обчислення маси тіла
+
+// function calcBMI() {
+//   const weight = prompt('Enter your weight');
+//   const height = prompt('Enter your height');
+
+//   const bmi = weight / Math.pow(height, 2);
+
+//   if (bmi < 18.5) {
+//     alert('Insufficient body weight');
+//   } else if (bmi >= 18.5 && bmi < 24.9) {
+//     alert('Norma');
+//   } else {
+//     alert('Excess body weight');
+//   }
+// }
+
+//розподіл на частинки
+
+//функція збору даних
+function colectInfo() {
+  const weight = prompt('Enter your weight');
+  const height = prompt('Enter your height');
+  return [weight, height];
+}
+
+//функція вичислення
+function getBMI(array) {
+  const weight = array[0];
+  const height = array[1];
+  return weight / Math.pow(height, 2);
+}
+
+//функція виведення повідомлень
+function showresult(bmi) {
+  if (bmi < 18.5) {
+    alert('Insufficient body weight');
+  } else if (bmi >= 18.5 && bmi < 24.9) {
+    alert('Norma');
+  } else {
+    alert('Excess body weight');
+  }
+}
+
+//функція вичислення результату
+function calcBMI() {
+  const info = colectInfo();
+  //Збираємо дані
+  const result = showresult(info);
+  //Виводимо результат
+  showresult(result);
+}
+
+calcBMI();
