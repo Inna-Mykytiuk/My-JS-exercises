@@ -170,29 +170,28 @@
 // ### Код
 
 // ```js
-const stones = [
-  { name: 'Изумруд', price: 1300, quantity: 4 },
-  { name: 'Бриллиант', price: 2700, quantity: 3 },
-  { name: 'Сапфир', price: 400, quantity: 7 },
-  { name: 'Щебень', price: 200, quantity: 2 },
-];
-// ```
+// const stones = [
+//   { name: 'Изумруд', price: 1300, quantity: 4 },
+//   { name: 'Бриллиант', price: 2700, quantity: 3 },
+//   { name: 'Сапфир', price: 400, quantity: 7 },
+//   { name: 'Щебень', price: 200, quantity: 2 },
+// ];
+// // ```
 
-function calcTotalPrice(stones, stoneName) {
-  //обраний камінь невідомий
-  let targetstone = null;
-  //для кожного камня із колецкції робимо порівняння на збіг по імені
-  for (let stone of stones) {
-    if (stone.name === stoneName) {
-      // якщо в нас є такий камінь записуємо його в змінну
-      targetstone = stone;
-    }
-  }
-  //повертаємо загальну вартість каменю
-  return targetstone.price * targetstone.quantity;
-}
-
-console.log(calcTotalPrice(stones, 'Сапфир'));
+// function calcTotalPrice(stones, stoneName) {
+//   //обраний камінь невідомий
+//   let targetstone = null;
+//   //для кожного камня із колецкції робимо порівняння на збіг по імені
+//   for (let stone of stones) {
+//     if (stone.name === stoneName) {
+//       // якщо в нас є такий камінь записуємо його в змінну
+//       targetstone = stone;
+//     }
+//   }
+//   //повертаємо загальну вартість каменю
+//   return targetstone.price * targetstone.quantity;
+// }
+// console.log(calcTotalPrice(stones, 'Сапфир'));
 
 // ## Example 4 - Комплексные задачи
 
@@ -205,61 +204,109 @@ console.log(calcTotalPrice(stones, 'Сапфир'));
 //  * Типов транзацкий всего два.
 //  * Можно положить либо снять деньги со счета.
 //  */
-// const Transaction = {
-//   DEPOSIT: 'deposit',
-//   WITHDRAW: 'withdraw',
-// };
+const Transaction = {
+  DEPOSIT: 'deposit',
+  WITHDRAW: 'withdraw',
+};
 
 // /*
 //  * Каждая транзакция это объект со свойствами: id, type и amount
 //  */
 
-// const account = {
-//   // Текущий баланс счета
-//   balance: 0,
+const account = {
+  // Текущий баланс счета
+  balance: 0,
 
-//   // История транзакций
-//   transactions: [],
+  // История транзакций
+  transactions: [],
 
-//   /*
-//    * Метод создает и возвращает объект транзакции.
-//    * Принимает сумму и тип транзакции.
-//    */
-//   createTransaction(amount, type) {},
+  /*
+   * Метод создает и возвращает объект транзакции.
+   * Принимает сумму и тип транзакции.
+   */
+  createTransaction(amount, type) {
+    //створюємо і повертаємо обєкт(назва транзакції, тип, та створюємо айді з довжиною акаунтних транзакцій)
+  },
 
-//   /*
-//    * Метод отвечающий за добавление суммы к балансу.
-//    * Принимает сумму танзакции.
-//    * Вызывает createTransaction для создания объекта транзакции
-//    * после чего добавляет его в историю транзакций
-//    */
-//   deposit(amount) {},
+  /*
+   * Метод отвечающий за добавление суммы к балансу.
+   * Принимает сумму танзакции.
+   * Вызывает createTransaction для создания объекта транзакции
+   * после чего добавляет его в историю транзакций
+   */
+  deposit(amount) {
+    //додаємо до балансу амаунт
+    //створюємо змінну транзакції і викликаємо його
+    //додаємо в історію транзакцій
+  },
 
-//   /*
-//    * Метод отвечающий за снятие суммы с баланса.
-//    * Принимает сумму танзакции.
-//    * Вызывает createTransaction для создания объекта транзакции
-//    * после чего добавляет его в историю транзакций.
-//    *
-//    * Если amount больше чем текущий баланс, выводи сообщение
-//    * о том, что снятие такой суммы не возможно, недостаточно средств.
-//    */
-//   withdraw(amount) {},
+  /*
+   * Метод отвечающий за снятие суммы с баланса.
+   * Принимает сумму танзакции.
+   * Вызывает createTransaction для создания объекта транзакции
+   * после чего добавляет его в историю транзакций.
+   *
+   * Если amount больше чем текущий баланс, выводи сообщение
+   * о том, что снятие такой суммы не возможно, недостаточно средств.
+   */
+  withdraw(amount) {
+    // робимо перевірку якщо амаунт більше ніж баланс виводимо повідомлення через return
+    // іфднімаємо від баланса суму
+    //створюємо змінну транзакції і викликаємо його
+    //додаємо в історію транзакцій
+  },
 
-//   /*
-//    * Метод возвращает текущий баланс
-//    */
-//   getBalance() {},
+  /*
+   * Метод возвращает текущий баланс
+   */
+  getBalance() {
+    //просто повертаємо баланс
+    // return this.balance;
+  },
 
-//   /*
-//    * Метод ищет и возвращает объект транзации по id
-//    */
-//   getTransactionDetails(id) {},
+  /*
+   * Метод ищет и возвращает объект транзации по id
+   */
+  getTransactionDetails(id) {
+    //дає можливість знайти обєкт однієї операції
+    // створюємо цикл for...of перебираємо транзакції із нашого акаунту
+    for (let transaction of account.transactions) {
+      // якщо айді транзакції = айді - повертаємо транзакцію
+      if (transaction.id === id) {
+        return transaction;
+      }
+    }
+    //якщо операції немає повертаємо рядок
+    return 'Операції не знайдено';
+  },
 
-//   /*
-//    * Метод возвращает количество средств
-//    * определенного типа транзакции из всей истории транзакций
-//    */
-//   getTransactionTotal(type) {},
-// };
+  /*
+   * Метод возвращает количество средств
+   * определенного типа транзакции из всей истории транзакций
+   */
+  getTransactionTotal(type) {
+    //створюємо проміжну тотал змінну для сумування
+
+    //перебираємо масив транзакцій акаунту
+
+    //якщо тип транзакції спвпадає з типом , сумуємо до тоталу суму транзакції
+
+    //повертаємо тотал
+    return total;
+  },
+};
 // ```
+
+console.log(account.getBalance());
+account.deposit(150);
+account.deposit(250);
+account.deposit(350);
+account.deposit(150);
+account.withdraw(50);
+account.withdraw(150);
+account.withdraw(250);
+console.log(account.getBalance());
+console.log(account.transactions);
+console.log(account.getTransactionDetails(20));
+console.log(account.getTransactionTotal(Transaction.WITHDRAW));
+console.log(account.getTransactionTotal(Transaction.DEPOSIT));
