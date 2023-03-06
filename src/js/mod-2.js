@@ -63,3 +63,32 @@
 // }
 
 //----------part-2---------
+
+//function expression
+//в цьому випадку функцію не можна викликати в довільному місці коду.
+// const add = function (a, b) {
+//   return a + b;
+// };
+
+// const result = add(5, 10);
+// console.log('result', result);
+
+// //function declaration
+// //в цьому випадку функцію можна викликати в довільному місці коду...до функції чи після немає значення
+// function arr() {
+//   return a + b;
+// }
+
+// const numbers = [];
+
+// const addNumber = function (array) {
+//   const number = prompt('Add number');
+//   array.push(number);
+// };
+
+// //return викристовуємо коли функція створює нову змінну, яку ми будемо викор. далі в коді
+
+// addNumber(numbers);
+// console.log('numbers', numbers);
+
+//------1------
