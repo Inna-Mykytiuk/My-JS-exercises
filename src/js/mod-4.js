@@ -416,8 +416,11 @@
 // }
 
 // function printContactsInfo({ names, phones }) {
+//розділяємо в масив по іменам
 //   const nameList = names.split(",");
+//розділяємо в масив по номерам
 //   const phoneList = phones.split(",");
+//для кожного номеру телефону зводимо по індексу з номером
 //   nameList.forEach(function (name, index) {
 //     console.log(`${name}: ${phoneList[index]}`);
 //   });
