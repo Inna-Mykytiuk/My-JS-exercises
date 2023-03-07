@@ -193,17 +193,17 @@
 // }
 // console.log(calcTotalPrice(stones, 'Сапфир'));
 
-// ## Example 4 - Комплексные задачи
+// // ## Example 4 - Комплексные задачи
 
-// Напиши скрипт управления личным кабинетом интернет банка. Есть объект `account`
-// в котором необходимо реализовать методы для работы с балансом и историей
-// транзакций.
+// // Напиши скрипт управления личным кабинетом интернет банка. Есть объект `account`
+// // в котором необходимо реализовать методы для работы с балансом и историей
+// // транзакций.
 
-// ```js
-// /*
-//  * Типов транзацкий всего два.
-//  * Можно положить либо снять деньги со счета.
-//  */
+// // ```js
+// // /*
+// //  * Типов транзацкий всего два.
+// //  * Можно положить либо снять деньги со счета.
+// //  */
 // const Transaction = {
 //   DEPOSIT: 'deposit',
 //   WITHDRAW: 'withdraw',
@@ -343,6 +343,224 @@
 // const { username } = user;
 // console.log(username);//undefined
 
-// Буде помилка
+// Буде помилка тому що змінної userEmail записаної в email не уснує
 // const { email: userEmail } = user;
 // console.log(email);//Error
+
+//------description
+/*Зміна імені змінної
+Під час деструктуризації можна змінити ім'я змінної, в яку розпаковується значення властивості. Спочатку пишемо ім'я властивості, з якої хочемо отримати значення, після чого ставимо двокрапку і пишемо ім'я змінної, в яку необхідно помістити значення цієї властивості.*/
+// const firstBook = {
+//   title: "The Last Kingdom",
+//   coverImage:
+//     "https://images-na.ssl-images-amazon.com/images/I/51b5YG6Y1rL.jpg",
+// };
+
+// const {
+//   title: firstTitle,
+//   coverImage: firstCoverImage = "https://via.placeholder.com/640/480",
+// } = firstBook;
+
+// console.log(firstTitle); // The Last Kingdom
+// console.log(firstCoverImage); // https://images-na.ssl-images-amazon.com/images/I/51b5YG6Y1rL.jpg
+
+//----------Деструктуризація в циклах
+
+// const books = [
+//   {
+//     title: 'The Last Kingdom',
+//     author: 'Bernard Cornwell',
+//     rating: 8.38,
+//   },
+//   {
+//     title: 'На березі спокійних вод',
+//     author: 'Роберт Шеклі',
+//     rating: 8.51,
+//   },
+// ];
+
+// for (const book of books) {
+//   const { title, author, rating } = book;
+
+//   console.log(title);
+//   console.log(author);
+//   console.log(rating);
+// }
+
+//----------Глибока деструктуризація
+// const user = {
+//   name: 'Jacques Gluke',
+//   tag: 'jgluke',
+//   stats: {
+//     followers: 5603,
+//     views: 4827,
+//     likes: 1308,
+//   },
+// };
+
+// const {
+//   name,
+//   tag,
+//   stats: { followers, views, likes },
+// } = user;
+
+// console.log(name); // Jacques Gluke
+// console.log(tag); // jgluke
+// console.log(followers); // 5603
+// console.log(userViews); // 4827
+// console.log(userLikes); // 1308
+
+//-------Деструктуризація масивів
+
+// const rgb = [200, 255, 100];
+// const [red, green, blue] = rgb;
+
+// console.log(`R:${red},G:${green},B:${blue}`); // "R:200,G:255,B:100"
+
+//Іноді з масиву необхідно деструктуризувати тільки перші N елементів, а інші зберегти в одну змінну у вигляді масиву. Деструктуруючи масив, можна розпакувати і присвоїти іншу частину елементів масиву змінної, використовуючи операцію ... (rest).
+
+// const rgb = [200, 255, 100];
+
+// const [red, ...colors] = rgb;
+
+// console.log(red); // "200"
+// console.log(colors); // [255, 100]
+
+//----------refactor with this
+
+// ## Example 4 - Комплексные задачи
+
+// Напиши скрипт управления личным кабинетом интернет банка. Есть объект `account`
+// в котором необходимо реализовать методы для работы с балансом и историей
+// транзакций.
+
+// ```js
+// /*
+//  * Типов транзацкий всего два.
+//  * Можно положить либо снять деньги со счета.
+//  */
+// const Transaction = {
+//   DEPOSIT: 'deposit',
+//   WITHDRAW: 'withdraw',
+// };
+
+// // /*
+// //  * Каждая транзакция это объект со свойствами: id, type и amount
+// //  */
+
+// const account = {
+//   // Текущий баланс счета
+//   balance: 0,
+
+//   // История транзакций
+//   transactions: [],
+
+//   /*
+//    * Метод создает и возвращает объект транзакции.
+//    * Принимает сумму и тип транзакции.
+//    */
+//   createTransaction(amount, type) {
+//     //створюємо і повертаємо обєкт(назва транзакції, тип, та створюємо айді з довжиною акаунтних транзакцій)
+//     return {
+//       amount,
+//       type,
+//       id: this.transactions.length,
+//     };
+//   },
+
+//   /*
+//    * Метод отвечающий за добавление суммы к балансу.
+//    * Принимает сумму танзакции.
+//    * Вызывает createTransaction для создания объекта транзакции
+//    * после чего добавляет его в историю транзакций
+//    */
+//   deposit(amount) {
+//     //додаємо до балансу амаунт
+//     this.balance += amount;
+//     //створюємо змінну транзакції і викликаємо його
+//     const transaction = this.createTransaction(amount, Transaction.DEPOSIT);
+//     //додаємо в історію транзакцій
+//     this.transactions.push(transaction);
+//   },
+
+//   /*
+//    * Метод отвечающий за снятие суммы с баланса.
+//    * Принимает сумму танзакции.
+//    * Вызывает createTransaction для создания объекта транзакции
+//    * после чего добавляет его в историю транзакций.
+//    *
+//    * Если amount больше чем текущий баланс, выводи сообщение
+//    * о том, что снятие такой суммы не возможно, недостаточно средств.
+//    */
+//   withdraw(amount) {
+//     // робимо перевірку якщо амаунт більше ніж баланс виводимо повідомлення
+//     if (amount > this.balance) {
+//       return 'Недостатньо коштів на рахунку';
+//     }
+//     this.balance -= amount;
+//     //створюємо змінну транзакції і викликаємо його
+//     const transaction = this.createTransaction(amount, Transaction.WITHDRAW);
+//     //додаємо в історію транзакцій
+//     this.transactions.push(transaction);
+//   },
+
+//   /*
+//    * Метод возвращает текущий баланс
+//    */
+//   getBalance() {
+//     //просто повертаємо баланс
+//     // return this.balance;
+//     return this.balance;
+//   },
+
+//   /*
+//    * Метод ищет и возвращает объект транзации по id
+//    */
+//   getTransactionDetails(id) {
+//     //дає можливість знайти обєкт однієї операції
+//     // створюємо цикл for...of перебираємо транзакції із нашого акаунту
+//     for (let transaction of this.transactions) {
+//       // якщо айді транзакції = айді - повертаємо транзакцію
+//       if (transaction.id === id) {
+//         return transaction;
+//       }
+//     }
+//     //якщо операції немає повертаємо рядок
+//     return 'Операції не знайдено';
+//   },
+
+//   /*
+//    * Метод возвращает количество средств
+//    * определенного типа транзакции из всей истории транзакций
+//    */
+//   getTransactionTotal(type) {
+//     //створюємо проміжну тотал змінну для сумування
+//     let total = 0;
+//     //перебираємо масив транзакцій акаунту
+//     for (let transaction of this.transactions) {
+//       //якщо тип транзакції спвпадає з типом , сумуємо до тоталу суму транзакції
+//       if (transaction.type === type) {
+//         total += transaction.amount;
+//       }
+//     }
+//     //повертаємо тотал
+//     return total;
+//   },
+// };
+// // ```
+
+// console.log(account.getBalance());
+// account.deposit(150);
+// account.deposit(250);
+// account.deposit(350);
+// account.deposit(150);
+// account.withdraw(50);
+// account.withdraw(150);
+// account.withdraw(250);
+// console.log(account.getBalance());
+// console.log(account.transactions);
+// console.log(account.getTransactionDetails(20));
+// console.log(account.getTransactionTotal(Transaction.WITHDRAW));
+// console.log(account.getTransactionTotal(Transaction.DEPOSIT));
+
+//--------task-1------
