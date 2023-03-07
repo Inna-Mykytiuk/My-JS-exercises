@@ -374,3 +374,16 @@ console.log(resObj2); //{name: 'Inna', param1: 15, param2: 15}
 //додавання властивостей
 let b3 = { ...b1, bike: true };
 console.log('b3', b3); //b3 {name: 'Inna', param1: 15, bike: true}
+
+//resr ...args
+
+function f1(a, ...b) {
+  console.log('a', a); //a 1
+  console.log('b', b); //b [2]
+}
+f1(1, 2);
+f1(1, 2, 3, 4, 5, 6, 7); // a 1 b (6) [2, 3, 4, 5, 6, 7]
+
+// приклад зі змінною
+let [s10, ...s11] = [100, 200, 300, 400];
+console.log('s11', s11); //s11 (3) [200, 300, 400]
