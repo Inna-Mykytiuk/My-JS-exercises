@@ -16,6 +16,33 @@
 
 // Добавь метод `updatePostCount(value)`, который в параметре `value` принимает
 // количество постов которые нужно добавить пользователю.
+// class Blogger {
+//   constructor({ email, age, numberOfPosts, topics }) {
+//     this.email = email;
+//     this.age = age;
+//     this.numberOfPosts = numberOfPosts;
+//     this.topics = topics;
+//   }
+
+//   getInfo() {
+//     return `User ${this.email} is ${this.age} years old and has ${this.numberOfPosts} posts.`;
+//   }
+
+//   updatePostCount(value) {
+//     this.numberOfPosts += value;
+//   }
+// }
+
+// const blogger = new Blogger({
+//   email: 'john.doe@example.com',
+//   age: 30,
+//   numberOfPosts: 10,
+//   topics: ['Technology', 'Gaming'],
+// });
+
+// console.log(blogger.getInfo()); // "User john.doe@example.com is 30 years old and has 10 posts."
+// blogger.updatePostCount(5);
+// console.log(blogger.getInfo()); // "User john.doe@example.com is 30 years old and has 15 posts."
 
 // ```js
 // const mango = new User({
