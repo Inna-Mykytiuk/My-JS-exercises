@@ -276,6 +276,8 @@ const cars = [
 // Пусть функция `getCarsWithType` возвращает массив автомобилей тип которых
 // совпадает со значением параметра `type`.
 
+// const carType = (cars, type) => cars.filter(car => car.type === type);
+// console.table(carType(cars, 'sedan'));
 // ```js
 // const getCarsWithType = (cars, type) =>
 //   cars.filter(({ type: carType }) => carType === type);
@@ -339,7 +341,9 @@ const cars = [
 // отсортированный по убыванию значения свойства `price`.
 
 // ```js
-// const sortByDescendingPrice = cars => {};
+// const sortByDescendingPrice = cars => {
+//   return [...cars].sort((a, b) => b.price - a.price);
+// };
 
 // console.table(sortByDescendingPrice(cars));
 // ```
