@@ -1,0 +1,2 @@
+!function(){const e=[{label:"red",color:"#FF0000"},{label:"green",color:"#00FF00"},{label:"blue",color:"#0000FF"},{label:"yellow",color:"#FFFF00"}],o=e=>e.map((e=>{const o=document.createElement("button");return o.type="button",o.textContent=e.label,o.style.backgroundColor=e.color,o}));document.querySelector(".container").append(...o(e)),console.log("createMarkup",o(e))}();
+//# sourceMappingURL=buttons.c8ef765f.js.map
