@@ -254,3 +254,76 @@ hr {
 .hide {
   display: none;
 }
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(88, 84, 84, 0.8);
+  transition: background-color 250ms linear;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: antiquewhite;
+  width: 400px;
+  height: 400px;
+}
+
+/* // .modal__btn-close {
+// } */
+
+.modal__btn-open {
+  color: #000;
+  background-color: #0000004d;
+  text-align: center;
+  padding: 0.8rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 400;
+  display: block;
+  /* // width: 100%; */
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  /* // background: transparent; */
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  margin: 0 auto;
+  margin-right: 0;
+}
+
+.modal__btn-open:hover,
+.modal__btn-close:hover {
+  background-color: rgba(252, 227, 138, 0.8);
+  color: #607b83;
+}
+
+.modal__btn-close {
+  color: #000;
+  background-color: #0000004d;
+  text-align: center;
+  padding: 0.8rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 400;
+  display: block;
+  /* // width: 100%; */
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  /* // background: transparent; */
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  margin: 0 auto;
+  margin-right: 0;
+}

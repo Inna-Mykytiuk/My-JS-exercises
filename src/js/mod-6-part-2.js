@@ -72,24 +72,48 @@
 
 // addEventListener("DOMContentLoaded", showModal);
 
-const overlay = document.querySelector('.overlay');
-const closeBtn = document.querySelector('.close');
-const openBtn = document.querySelector('.open');
+// const overlay = document.querySelector('.overlay');
+// const closeBtn = document.querySelector('.close');
+// const openBtn = document.querySelector('.open');
 
-// const showModal = () => {
-//   overlay.classList.remove('hide');
+// // const showModal = () => {
+// //   overlay.classList.remove('hide');
+// // };
+
+// // const hideModal = () => {
+// //   overlay.classList.add('hide');
+// // };
+
+// const toggleModal = () => {
+//   overlay.classList.toggle('hide');
 // };
 
-// const hideModal = () => {
-//   overlay.classList.add('hide');
-// };
+// addEventListener('DOMContentLoaded', toggleModal);
+// window.addEventListener('DOMContentLoaded', toggleModal);
 
-const toggleModal = () => {
-  overlay.classList.toggle('hide');
+// closeBtn.addEventListener('click', toggleModal);
+// openBtn.addEventListener('click', toggleModal);
+
+const refs = {
+  recepiesList: document.querySelector('.recepies-list'),
+  openModalButton: document.querySelector('.modal__btn-open'),
+  closeModalButton: document.querySelector('.modal__btn-close'),
+  backdrop: document.querySelector('.backdrop'),
 };
 
-addEventListener('DOMContentLoaded', toggleModal);
-window.addEventListener('DOMContentLoaded', toggleModal);
+function openModal() {
+  refs.backdrop.classList.remove('is-hidden');
+}
+function closeModal() {
+  refs.backdrop.classList.add('is-hidden');
+}
 
-closeBtn.addEventListener('click', toggleModal);
-openBtn.addEventListener('click', toggleModal);
+function onOpenButtonClick(event) {
+  openModal();
+}
+function onCloseButtonClick(event) {
+  closeModal();
+}
+
+refs.openModalButton.addEventListener('click', onOpenButtonClick);
+refs.closeModalButton.addEventListener('click', onCloseButtonClick);
