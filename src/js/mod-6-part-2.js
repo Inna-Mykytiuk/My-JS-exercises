@@ -72,26 +72,24 @@
 
 // addEventListener("DOMContentLoaded", showModal);
 
-// const overlay = document.querySelector(".overlay");
-// const closeBtn = document.querySelector(".close");
+const overlay = document.querySelector('.overlay');
+const closeBtn = document.querySelector('.close');
+const openBtn = document.querySelector('.open');
 
-// // const showModal = () => {
-// //   overlay.classList.remove("hide");
-// // };
-
-// // const hideModal = () => {
-// //   overlay.classList.add("hide");
-// // };
-
-// const toggleModal = () => {
-//   overlay.classList.toggle("hide");
+// const showModal = () => {
+//   overlay.classList.remove('hide');
 // };
 
-// addEventListener("DOMContentLoaded", toggleModal);
-// // window.addEventListener("DOMContentLoaded", toggleModal);
+// const hideModal = () => {
+//   overlay.classList.add('hide');
+// };
 
-// closeBtn.addEventListener("click", toggleModal);
+const toggleModal = () => {
+  overlay.classList.toggle('hide');
+};
 
-const list = document.querySelector('#categories');
+addEventListener('DOMContentLoaded', toggleModal);
+window.addEventListener('DOMContentLoaded', toggleModal);
 
-console.log('list', list);
+closeBtn.addEventListener('click', toggleModal);
+openBtn.addEventListener('click', toggleModal);
