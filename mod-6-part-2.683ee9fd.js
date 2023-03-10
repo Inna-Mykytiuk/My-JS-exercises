@@ -1,2 +1,0 @@
-!function(){const e={recepiesList:document.querySelector(".recepies-list"),openModalButton:document.querySelector(".modal__btn-open"),closeModalButton:document.querySelector(".modal__btn-close"),backdrop:document.querySelector(".backdrop")};e.openModalButton.addEventListener("click",(function(o){e.backdrop.classList.remove("is-hidden")})),e.closeModalButton.addEventListener("click",(function(o){e.backdrop.classList.add("is-hidden")}))}();
-//# sourceMappingURL=mod-6-part-2.683ee9fd.js.map
