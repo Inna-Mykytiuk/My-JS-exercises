@@ -94,26 +94,26 @@
 // closeBtn.addEventListener('click', toggleModal);
 // openBtn.addEventListener('click', toggleModal);
 
-const refs = {
-  recepiesList: document.querySelector('.recepies-list'),
-  openModalButton: document.querySelector('.modal__btn-open'),
-  closeModalButton: document.querySelector('.modal__btn-close'),
-  backdrop: document.querySelector('.backdrop'),
-};
+// const refs = {
+//   recepiesList: document.querySelector('.recepies-list'),
+//   openModalButton: document.querySelector('.modal__btn-open'),
+//   closeModalButton: document.querySelector('.modal__btn-close'),
+//   backdrop: document.querySelector('.backdrop'),
+// };
 
-function openModal() {
-  refs.backdrop.classList.remove('is-hidden');
-}
-function closeModal() {
-  refs.backdrop.classList.add('is-hidden');
-}
+// function openModal() {
+//   refs.backdrop.classList.remove('is-hidden');
+// }
+// function closeModal() {
+//   refs.backdrop.classList.add('is-hidden');
+// }
 
-function onOpenButtonClick(event) {
-  openModal();
-}
-function onCloseButtonClick(event) {
-  closeModal();
-}
+// function onOpenButtonClick(event) {
+//   openModal();
+// }
+// function onCloseButtonClick(event) {
+//   closeModal();
+// }
 
-refs.openModalButton.addEventListener('click', onOpenButtonClick);
-refs.closeModalButton.addEventListener('click', onCloseButtonClick);
+// refs.openModalButton.addEventListener('click', onOpenButtonClick);
+// refs.closeModalButton.addEventListener('click', onCloseButtonClick);
