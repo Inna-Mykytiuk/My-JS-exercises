@@ -1,13 +1,13 @@
 // const text = "Hello World";
 // console.log(JSON.parse(text));
 
-// const form = document.querySelector("#message-form"); // отримали доступ до форми
-// const output = document.querySelector("#output"); // отримали доступ до span куди будемо виводити дані
-// const LOCALSTORAGE_KEY = "goit-example-message"; // ключ для збереження даних
+// const form = document.querySelector('#message-form'); // отримали доступ до форми
+// const output = document.querySelector('#output'); // отримали доступ до span куди будемо виводити дані
+// const LOCALSTORAGE_KEY = 'goit-example-message'; // ключ для збереження даних
 
 // updateOutput();
 
-// form.addEventListener("submit", saveMessage);
+// form.addEventListener('submit', saveMessage);
 
 // function saveMessage(evt) {
 //   evt.preventDefault();
@@ -17,15 +17,15 @@
 // }
 
 // function updateOutput() {
-//   output.textContent = localStorage.getItem(LOCALSTORAGE_KEY) || "";
+//   output.textContent = localStorage.getItem(LOCALSTORAGE_KEY) || '';
 // }
 
-// const form = document.querySelector("#message-form");
+// const form = document.querySelector('#message-form');
 
 // console.log(form.elements);
 // // const userName = document.querySelector(".user-name");
 
-// form.addEventListener("submit", (event) => {
+// form.addEventListener('submit', event => {
 //   event.preventDefault();
 //   //   const {
 //   //     elements: { username, password },
@@ -39,13 +39,13 @@
 //   inputList.userName;
 //   inputList.password;
 
-//   console.log(username.value, password.value);
+//   console.log(inputList.userName, inputList.password);
 // });
 
-// const iframe = document.querySelector("#vimeo-player");
-// const player = new Vimeo.Player(iframe);
+const iframe = document.querySelector('#vimeo-player');
+const player = new Vimeo.Player(iframe);
 
-// console.log(player);
+console.log(player);
 
 // player.on("timeupdate", function (time) {
 //   console.log("time", time);
@@ -65,12 +65,12 @@
 // const list = document.querySelector("ul");
 // list.insertAdjacentHTML("beforeend", markup);
 
-const text = 'Hello World';
+// const text = 'Hello World';
 
-try {
-  JSON.parse(text);
-} catch (error) {
-  console.log('parsing error');
-}
+// try {
+//   JSON.parse(text);
+// } catch (error) {
+//   console.log('parsing error');
+// }
 
-console.log('Hello');
+// console.log('Hello');
