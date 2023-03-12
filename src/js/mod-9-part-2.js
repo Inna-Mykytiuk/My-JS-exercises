@@ -1,3 +1,32 @@
+//Promises
+
+// const isSuccess = true;
+const isSuccess = false;
+
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    if (isSuccess) {
+      resolve('Success');
+    } else {
+      reject('Error');
+    }
+  }, 2000);
+});
+// console.log('promise', promise);
+
+console.log('before promise .then');
+
+promise.then(
+  value => {
+    console.log('On resolve inside promise');
+    console.log('value', value);
+  },
+  error => {
+    console.log('On reject inside promise');
+    console.log('error', error);
+  }
+);
+
 // [1, 2, 3, 4, 5].map((element, index, arr) => {});
 
 // const promise = new Promise((resolve, reject) => {
