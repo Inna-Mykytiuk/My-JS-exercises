@@ -1,32 +1,33 @@
 //Promises
 
 // const isSuccess = true;
-const isSuccess = false;
+// const isSuccess = false;
 
-const promise = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    if (isSuccess) {
-      resolve('Success');
-    } else {
-      reject('Error');
-    }
-  }, 2000);
-});
-// console.log('promise', promise);
+// const promise = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     if (isSuccess) {
+//       resolve('Success');
+//     } else {
+//       reject('Error');
+//     }
+//   }, 2000);
+// });
+// // console.log('promise', promise);
 
-console.log('before promise .then');
+// console.log('before promise .then');
 
-promise.then(
-  value => {
-    console.log('On resolve inside promise');
-    console.log('value', value);
-  },
-  error => {
-    console.log('On reject inside promise');
-    console.log('error', error);
-  }
-);
+// promise
+//   .then(value => {
+//     console.log('On resolve inside promise');
+//     console.log('value', value);
+//   })
+//   .catch(error => {
+//     console.log('On reject inside promise');
+//     console.log('error', error);
+//   })
+//   .finally(() => console.log('Promise settled'));
 
+// console.log('after promise .then');
 // [1, 2, 3, 4, 5].map((element, index, arr) => {});
 
 // const promise = new Promise((resolve, reject) => {
@@ -42,19 +43,21 @@ promise.then(
 // console.log("a");
 // console.log("b");
 
-// const result = new Promise((resolve, reject) => {
-//   let total = 0;
+const result = new Promise((resolve, reject) => {
+  let total = 0;
 
-//   for (let i = 0; i < 1000000000; i++) {
-//     total += i;
-//   }
+  for (let i = 0; i < 1000000; i++) {
+    total += i;
+  }
 
-//   if (total % 2 === 0) {
-//     resolve(total);
-//   } else {
-//     reject(8);
-//   }
-// });
+  if (total % 2 === 0) {
+    resolve(total);
+  } else {
+    reject(8);
+  }
+});
+
+console.log('result', result);
 
 // const result = new Promise((ok, failed) => {
 //   let total = 0;
